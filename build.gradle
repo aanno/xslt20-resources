@@ -86,8 +86,8 @@ task copyPublishers() {
 
 task dist(type: Zip, dependsOn: [ "copyAll" ]) {
   from('build/stage')
-  into 'docbook-xslt20-resources-' + version
-  archiveName 'docbook-xslt20-resources-' + version + ".zip"
+  into 'docbook-xslt20-resources-' + thisVersion
+  archiveFileName = "docbook-xslt20-resources-" + thisVersion + ".zip"
 }
 
 // ============================================================
